@@ -33,7 +33,7 @@
             maxFontSize: '65px'
         }
     );
-    
+
     // Offset for Main Navigation
     $('#mainNav').affix({
         offset: {
@@ -56,6 +56,7 @@ $(function() {
             '<i class="fa fa-chevron-left "></i>',
             '<i class="fa fa-chevron-right"></i>',
         ],
+        dots: false,
         items:1,
         loop:true,
         autoplay:true,
@@ -80,7 +81,7 @@ function reset_video_size(video_width){
   var videos = $('.owl-video-wrapper');
   var v_height = 0;
 
-  //user-defined width ELSE, width from inline css (when owl.autoWidth == false), 
+  //user-defined width ELSE, width from inline css (when owl.autoWidth == false),
   //ELSE, computed innerwidth of the first element.
   var v_width = (video_width) ? video_width : ((items.css('width') != 'auto') ? items.css('width') : items.innerWidth());
 
@@ -92,6 +93,3 @@ function reset_video_size(video_width){
 
   videos.css({ 'height':v_height, 'width':v_width });
 };
-
-
-
